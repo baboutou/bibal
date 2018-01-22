@@ -11,7 +11,7 @@ import javax.persistence.Id;
 @Entity
 public class Livre extends Oeuvre {
 
-	@Id
+	//@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idLivre;
 	public int getIdLivre() {
