@@ -1,0 +1,10 @@
+com\bibal\classes\Exemplaire.class
+com\bibal\entities\EtatExemplaire.class
+com\bibal\classes\Oeuvre.class
+com\bibal\entities\EtatReservation.class
+com\bibal\classes\Usager.class
+com\bibal\classes\Magazine.class
+com\bibal\classes\Livre.class
+com\bibal\classes\Emprunt.class
+com\bibal\BibalApplication.class
+com\bibal\classes\Reservation.class

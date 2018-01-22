@@ -8,9 +8,9 @@ import javax.persistence.Id;
 
 public class Magazine extends Oeuvre {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int idMagazine;
+	//@Id erreur
+	//@GeneratedValue(strategy=GenerationType.IDENTITY)
+	//private int idMagazine;
 
 	public Magazine()
 	{
