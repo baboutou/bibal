@@ -1,5 +1,6 @@
 package com.bibal.classes;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -14,7 +15,7 @@ import com.bibal.entities.EtatReservation;
 
 
 @Entity
-public class Reservation {
+public class Reservation implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -77,12 +78,14 @@ public class Reservation {
 
 	public Reservation(Date date)
 	{
+		super();
 		dateReservation=date;
 		etatReservation=EtatReservation.Cree.toString();
 	}
 
 	public Reservation(Date date, Usager user, Oeuvre oeuvre)
 	{
+		super();
 		this.dateReservation= date;
 		this.user = user;
 		this.oeuvre = oeuvre;

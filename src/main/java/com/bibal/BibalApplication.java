@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 
 public class BibalApplication implements CommandLineRunner {
 
-	@Autowired
+	//@Autowired
 	public static void main(String[] args) {
 		SpringApplication.run(BibalApplication.class, args);
 	}

@@ -9,6 +9,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.bibal.service.ExemplaireSER;
+import com.bibal.service.UsagerSER;
+
 @Entity
 public class Emprunt {
 
@@ -22,17 +25,25 @@ public class Emprunt {
 
 	@ManyToOne
 	@JoinColumn(name="idUsager")
-	private Usager usager;
+	private UsagerSER usager;
 
 	@ManyToOne
 	@JoinColumn(name="idExemplaire")
-	private Exemplaire exemplaire;
+	private ExemplaireSER exemplaire;
 
 	public Emprunt() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Emprunt(Usager usager, Exemplaire exemplaire) {
+	/*public Emprunt(Usager usager, Exemplaire exemplaire) {
+		this.usager=usager;
+		this.exemplaire=exemplaire;
+		this.dateEmprunt=new Date();
+		this.dateRetour=new Date();
+	}*/
+
+	public Emprunt(UsagerSER usager2, ExemplaireSER exemplaire2) {
+		// TODO Auto-generated constructor stub
 		this.usager=usager;
 		this.exemplaire=exemplaire;
 		this.dateEmprunt=new Date();
@@ -79,19 +90,19 @@ public class Emprunt {
 		this.etatExemplaireRetour = etatExemplaireRetour;
 	}
 
-	public Usager getUsager() {
+	public UsagerSER getUsager() {
 		return usager;
 	}
 
-	public void setUsager(Usager usager) {
+	public void setUsager(UsagerSER usager) {
 		this.usager = usager;
 	}
 
-	public Exemplaire getExemplaire() {
+	public ExemplaireSER getExemplaire() {
 		return exemplaire;
 	}
 
-	public void setExemplaire(Exemplaire exemplaire) {
+	public void setExemplaire(ExemplaireSER exemplaire) {
 		this.exemplaire = exemplaire;
 	}
 

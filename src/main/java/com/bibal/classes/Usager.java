@@ -1,5 +1,6 @@
 package com.bibal.classes;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -10,7 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Usager {
+public class Usager implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -79,6 +80,7 @@ public class Usager {
 	}
 	public Usager(String nom,String prenom,String adr,String email,String tele)
 	{
+		super();
 		 NomUsager=nom;
 		 prenomUsager=prenom;
 		 adresse=adr;

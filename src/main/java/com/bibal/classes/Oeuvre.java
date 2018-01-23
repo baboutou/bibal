@@ -1,5 +1,6 @@
 package com.bibal.classes;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
@@ -15,7 +16,7 @@ import javax.persistence.OneToMany;
 
 @Entity
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
-public abstract class Oeuvre {
+public abstract class Oeuvre implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -84,6 +85,8 @@ public abstract class Oeuvre {
 
 	public Oeuvre(String titreoeuvre,Date dateParution,Date DateAchatOeuvre)
 	{
+
+		super();
 		this.titreOeuvre=titreoeuvre;
 		this.dateParution=dateParution;
 		this.dateAchatOeuvre=DateAchatOeuvre;

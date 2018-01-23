@@ -11,16 +11,7 @@ import javax.persistence.Id;
 @Entity
 public class Livre extends Oeuvre {
 
-	//@Id
-	//@GeneratedValue(strategy=GenerationType.IDENTITY)
-	/*private int idLivre;
-	public int getIdLivre() {
-		return idLivre;
-	}
 
-	public void setIdLivre(int idLivre) {
-		this.idLivre = idLivre;
-	}*/
 
 	public String getAuteur() {
 		return Auteur;
